@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapeer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px 0;
+}
+
+.container {
+    width: 900px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sh{
+    width: 900px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shell_small {
+    width: 50px;
+    height: 50px;
+    background-color: chartreuse;
+    border: 1px solid black;
+}
+
+.shell {
+    width: 100px;
+    height: 50px;
+    background-color: chartreuse;
+    border: 1px solid black;
+}
+
+.shell_side {
+    width: 50px;
+    height: 100px;
+    background-color: chartreuse;
+    border: 1px solid black;
+}
+
+.r1 {
+    width: 900px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.r2 {
+    width: 900px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chess {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.r1 .chess:nth-child(even),
+.r2 .chess:nth-child(odd) {
+    background-color: black;
+}
+
+.loading {
+    width: 400px;
+    height: 40px;
+    font-family: consolas;
+    margin: 40px 0;
+}
+
+span {
+    text-transform: uppercase;
+    display: inline-block;
+    padding-top: 25px;
+    margin-left: 20px;
+
+    animation: ioan_mars 1s ease-in-out infinite;
+    animation-delay: calc(.1s* var(--i));
+}
+
+.border_loading_band {
+    width: 900px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.band_loading {
+    width: 900px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: chartreuse;
+    margin-bottom: 40px;
+
+    animation-name: ilon_mask;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes ilon_mask {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 900px;
+    }
+}
+
+@keyframes ioan_mars {
+    0% {
+        transform: translateY(0);
+        font-size: 14px;
+    }
+
+    20% {
+        transform: translateY(-20px);
+        font-size: 24px;
+    }
+
+    40%, 100% {
+        transform: translateY(0);
+        font-size: 14px;
+    }
+}
