@@ -77,6 +77,56 @@ h2{
     background-color: black;
 }
 
+.rating {
+    transform: translate(-50%, -50%) rotateY(180deg);
+    position: absolute;
+    left: 50%;
+    top: 1110px;
+    display: flex;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    display: block;
+    width: 50px;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.rating label::before {
+    content: '\f005';
+    font-family: 'Font Awesome 5 Free';
+    font-size: 50px;
+    font-weight: 900;
+    color: gray;
+    position: relative;
+    display: block;
+}
+
+.rating label::after {
+    position: absolute;
+    display: block;
+    content: '\f005';
+    font-family: 'Font Awesome 5 Free';
+    font-size: 50px;
+    font-weight: 900;
+    color: gold;
+    opacity: 0;
+    transition: .5s;
+    top: 0;
+    text-shadow: 0 2px 5px rgba(red, green, blue, .5);
+}
+
+.rating label:hover::after,
+.rating label:hover ~ label::after,
+.rating input:checked ~ label::after {
+    opacity: 1;
+}
+
+
 .loading {
     width: 400px;
     height: 40px;
